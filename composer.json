@@ -1,0 +1,27 @@
+{
+    "name": "fnoual/viewgen",
+    "description": "Laravel 7.x command line view generator",
+    "authors": [
+        {
+            "name": "Fawzi Noual",
+            "email": "fouzi.noual@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fnoual\\Generators\\" : "src/"
+        }
+    },
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Fnoual\\Generators\\ViewgenServiceProvider"
+            ]
+        }
+    }
+}

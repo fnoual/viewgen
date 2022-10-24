@@ -11,7 +11,7 @@ class GenerateMultipleViews extends Command
      *
      * @var string
      */
-    protected $signature = 'make:views {paths}';
+    protected $signature = 'make:views {paths*}';
 
     /**
      * The console command description.
@@ -38,8 +38,7 @@ class GenerateMultipleViews extends Command
     public function handle()
     {
         $viewsPath = resource_path() . '\views\\';
-        $paths = $this->argument('path');
-        $paths = explode(' ', $paths);
+        $paths = $this->argument('paths');
         foreach($paths as $path) {
             $explodedPath = explode('.', $path);
             $check = implode("\\", $explodedPath);
